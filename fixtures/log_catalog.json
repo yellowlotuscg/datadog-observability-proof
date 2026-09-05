@@ -1,0 +1,86 @@
+{
+  "synthetic": true,
+  "schema_note": "Synthetic log events for the fictional 'storefront' checkout service. No log line was captured from a live Datadog org. Facets mirror documented Datadog reserved attributes (@http.status_code) and standard facets (service, status, env, host).",
+  "logs": [
+    {
+      "timestamp": "2026-09-04T13:01:02Z",
+      "service": "checkout-api",
+      "status": "error",
+      "env": "prod",
+      "host": "web-01",
+      "@http.status_code": 500,
+      "latency_ms": 2300,
+      "message": "POST /v1/checkout failed: payment provider timeout after 2000ms"
+    },
+    {
+      "timestamp": "2026-09-04T13:01:05Z",
+      "service": "checkout-api",
+      "status": "error",
+      "env": "prod",
+      "host": "web-02",
+      "@http.status_code": 502,
+      "latency_ms": 3100,
+      "message": "POST /v1/checkout failed: bad gateway from payment provider"
+    },
+    {
+      "timestamp": "2026-09-04T13:01:09Z",
+      "service": "checkout-api",
+      "status": "warn",
+      "env": "prod",
+      "host": "web-01",
+      "@http.status_code": 200,
+      "latency_ms": 1450,
+      "message": "POST /v1/checkout completed slowly: retry performed inside payment client"
+    },
+    {
+      "timestamp": "2026-09-04T13:01:11Z",
+      "service": "checkout-api",
+      "status": "info",
+      "env": "prod",
+      "host": "web-03",
+      "@http.status_code": 200,
+      "latency_ms": 380,
+      "message": "POST /v1/checkout completed for order 1042"
+    },
+    {
+      "timestamp": "2026-09-04T13:02:01Z",
+      "service": "checkout-api",
+      "status": "error",
+      "env": "prod",
+      "host": "web-03",
+      "@http.status_code": 500,
+      "latency_ms": 1980,
+      "message": "POST /v1/checkout failed: inventory reservation conflict"
+    },
+    {
+      "timestamp": "2026-09-04T13:02:40Z",
+      "service": "checkout-api",
+      "status": "info",
+      "env": "staging",
+      "host": "web-11",
+      "@http.status_code": 200,
+      "latency_ms": 210,
+      "message": "POST /v1/checkout completed for order 9001"
+    },
+    {
+      "timestamp": "2026-09-04T13:03:12Z",
+      "service": "checkout-api",
+      "status": "warn",
+      "env": "prod",
+      "host": "web-02",
+      "@http.status_code": 200,
+      "latency_ms": 1220,
+      "message": "GET /v1/checkout/health degraded: database replica lag above 1s"
+    },
+    {
+      "timestamp": "2026-09-04T13:04:00Z",
+      "service": "frontend",
+      "status": "info",
+      "env": "prod",
+      "host": "web-01",
+      "@http.status_code": 200,
+      "latency_ms": 95,
+      "message": "GET /cart rendered for session 7719"
+    }
+  ]
+}

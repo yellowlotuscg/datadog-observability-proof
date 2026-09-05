@@ -1,0 +1,17 @@
+{
+  "name": "Synthetic checkout failure rate",
+  "type": "query alert",
+  "query": "avg(last_5m):avg:storefront.checkout.failure_rate{env:demo} > 5",
+  "message": "Review synthetic checkout errors and recent changes. Do not auto-remediate.",
+  "tags": [
+    "env:demo",
+    "service:storefront"
+  ],
+  "options": {
+    "thresholds": {
+      "critical": 5,
+      "warning": 3
+    },
+    "notify_no_data": false
+  }
+}

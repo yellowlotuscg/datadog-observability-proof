@@ -1,0 +1,42 @@
+{
+  "synthetic": true,
+  "schema_note": "Synthetic metric catalog for the fictional 'storefront' workload. No metric was captured from a live Datadog org. Names and types follow documented Datadog conventions (gauge/count/rate/distribution). system.cpu.user is a well-known documented Agent metric used in Datadog doc examples.",
+  "metrics": [
+    {
+      "name": "storefront.checkout.requests",
+      "type": "count",
+      "unit": "requests",
+      "description": "Total checkout requests per interval, tagged by env, service, status, host"
+    },
+    {
+      "name": "storefront.checkout.errors",
+      "type": "count",
+      "unit": "errors",
+      "description": "Total checkout errors per interval, tagged by env, service, status, host"
+    },
+    {
+      "name": "storefront.checkout.latency",
+      "type": "distribution",
+      "unit": "milliseconds",
+      "description": "Raw checkout latency distribution submitted by the application"
+    },
+    {
+      "name": "storefront.checkout.p95_latency",
+      "type": "gauge",
+      "unit": "milliseconds",
+      "description": "Server-side computed p95 checkout latency, tagged by env, service, host"
+    },
+    {
+      "name": "storefront.checkout.failure_rate",
+      "type": "gauge",
+      "unit": "percent",
+      "description": "Share of checkout requests that failed, 0 to 100, tagged by env, service"
+    },
+    {
+      "name": "system.cpu.user",
+      "type": "gauge",
+      "unit": "percent",
+      "description": "Documented Agent metric (used in Datadog docs examples); included so fixtures show the exact query shapes from the docs"
+    }
+  ]
+}
